@@ -128,6 +128,9 @@ open class SideMenuManager : NSObject {
      */
     open var menuDismissOnPush = true
     
+    /// when user menu present new vc ment should not dismiss
+    open var menuKeepWhenPresentNewVC = false
+    
     /// Forces menus to always animate when appearing or disappearing, regardless of a pushed view controller's animation.
     open var menuAlwaysAnimate = false
     

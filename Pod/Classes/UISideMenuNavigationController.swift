@@ -165,6 +165,9 @@ open class UISideMenuNavigationController: UINavigationController {
     override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        if sideMenuManager.menuKeepWhenPresentNewVC {
+            return
+        }
         // When presenting a view controller from the menu, the menu view gets moved into another transition view above our transition container
         // which can break the visual layout we had before. So, we move the menu view back to its original transition view to preserve it.
         if !isBeingDismissed {
